@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Future_Plan_Review_Date</fullName>
+    <active>true</active>
+    <description>Validation for Future Plan Review Date</description>
+    <errorConditionFormula>Future_Plan_Review_Date__c &lt; TODAY()</errorConditionFormula>
+    <errorMessage>Future Plan Review Date cannot be a date in the past</errorMessage>
+</ValidationRule>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accounts_not_owned_by_AMs</fullName>
+    <booleanFilter>(1 OR 2 OR 3) AND 4</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Manager__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Manager__c</field>
+        <operation>contains</operation>
+        <value>ulka</value>
+    </filters>
+    <filters>
+        <field>Account_Manager__c</field>
+        <operation>contains</operation>
+        <value>rajesh</value>
+    </filters>
+    <filters>
+        <field>Account_Manager__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.B2B_Account</value>
+    </filters>
+    <label>Accounts not owned by AMs</label>
+    <sharedTo>
+        <role>Management</role>
+    </sharedTo>
+</ListView>

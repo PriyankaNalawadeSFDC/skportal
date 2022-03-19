@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Vertical__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Depends on Company Category</inlineHelpText>
+    <label>Industry / Vertical</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Company_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Industry_Vertical</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Distributor / Retailer / VAR</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Automobile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Distributor / Retailer / VAR</controllingFieldValue>
+            <valueName>Chemicals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Agent / Broker</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Construction / Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Distributor / Retailer / VAR</controllingFieldValue>
+            <controllingFieldValue>Agent / Broker</controllingFieldValue>
+            <valueName>Engineering / Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Distributor / Retailer / VAR</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>FMCG / Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <valueName>Healthcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Distributor / Retailer / VAR</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Luxury / Jewellery / Diamonds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Distributor / Retailer / VAR</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Pharma / Lifesciences</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <valueName>Software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturer</controllingFieldValue>
+            <controllingFieldValue>Distributor / Retailer / VAR</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Textiles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Distributor / Retailer / VAR</controllingFieldValue>
+            <controllingFieldValue>Agent / Broker</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Airline / Travel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Agent / Broker</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>BFSI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Entertainment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Environmental</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Event Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Hospitality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Distributor / Retailer / VAR</controllingFieldValue>
+            <valueName>IT / ITES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <valueName>Legal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Agent / Broker</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Logistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Manpower / Human Resources</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <valueName>Media / Arts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Provider</controllingFieldValue>
+            <valueName>Research / Consulting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distributor / Retailer / VAR</controllingFieldValue>
+            <controllingFieldValue>Service Aggregator</controllingFieldValue>
+            <valueName>Agriculture</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

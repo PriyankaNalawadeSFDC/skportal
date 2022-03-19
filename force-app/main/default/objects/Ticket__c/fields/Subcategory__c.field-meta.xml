@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subcategory__c</fullName>
+    <externalId>false</externalId>
+    <label>Subcategory</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Service_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Antivirus</fullName>
+                <default>false</default>
+                <label>Antivirus</label>
+            </value>
+            <value>
+                <fullName>Cleaning</fullName>
+                <default>false</default>
+                <label>Cleaning</label>
+            </value>
+            <value>
+                <fullName>File Server</fullName>
+                <default>false</default>
+                <label>File Server</label>
+            </value>
+            <value>
+                <fullName>Pest Control</fullName>
+                <default>false</default>
+                <label>Pest Control</label>
+            </value>
+            <value>
+                <fullName>Physical</fullName>
+                <default>false</default>
+                <label>Physical</label>
+            </value>
+            <value>
+                <fullName>Symantec</fullName>
+                <default>false</default>
+                <label>Symantec</label>
+            </value>
+            <value>
+                <fullName>Veritas</fullName>
+                <default>false</default>
+                <label>Veritas</label>
+            </value>
+            <value>
+                <fullName>Virtual</fullName>
+                <default>false</default>
+                <label>Virtual</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Admin</controllingFieldValue>
+            <valueName>Cleaning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Admin</controllingFieldValue>
+            <valueName>Pest Control</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Application</controllingFieldValue>
+            <valueName>Antivirus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assets</controllingFieldValue>
+            <valueName>File Server</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assets</controllingFieldValue>
+            <valueName>Physical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Assets</controllingFieldValue>
+            <valueName>Virtual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Backup</controllingFieldValue>
+            <valueName>Symantec</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Backup</controllingFieldValue>
+            <valueName>Veritas</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

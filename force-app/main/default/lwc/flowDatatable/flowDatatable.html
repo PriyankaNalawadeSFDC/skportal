@@ -1,0 +1,187 @@
+<template>
+    <!-- <lightning-datatable data={records} columns={fieldColumns} key-field="id" hide-checkbox-column></lightning-datatable> -->
+
+    <div if:false={viewRecord} class="table-scroll" style="margin-top:15px;">
+
+        <table class="slds-table_fixed-layout slds-table slds-table_bordered"
+            aria-labelledby="element-with-table-label other-element-with-table-label">
+            <thead>
+                <tr>
+                    <template for:each={fieldColumns} for:item="col">
+                        <th style="width:150px" key={col.label} class="fix slds-cell-wrap fixHeader">{col.label}
+                        </th>
+                    </template>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <template for:each={paginatedRecord} for:item="rec">
+                    <tr key={rec.Id}>
+                        <td key={rec.Id} id={rec.Id} class="fix" onclick={handleViewRecord}>{rec.Name}</td>
+                        <td key={rec.Id} id={rec.Id} class="fix" onclick={handleViewRecord}>
+                            <lightning-formatted-date-time value={rec.CreatedDate} year="numeric" month="numeric"
+                                day="numeric" hour="2-digit" minute="2-digit" hour12="true">
+                            </lightning-formatted-date-time>
+                        </td>
+
+                        <td key={rec.Id} id={rec.Id} class="fix" onclick={handleViewRecord}>{rec.Subject__c}</td>
+                        <td key={rec.Id} id={rec.Id} class="fix" onclick={handleViewRecord}>{rec.Service_Category__c}
+                        </td>
+                        <td key={rec.Id} id={rec.Id} class="fix" onclick={handleViewRecord}>{rec.AssetName__c}</td>
+                        <td key={rec.Id} id={rec.Id} class="fix" onclick={handleViewRecord}>{rec.Status__c}</td>
+                        <td key={rec.Id} id={rec.Id} class="fix" onclick={handleViewRecord}>{rec.ContactName__c}</td>
+                    </tr>
+
+                </template>
+            </tbody>
+        </table>
+        <c-pagination-cmp page-size-value="10" tabledata={records}  onaction={handlePaginationAction}>
+            <div class="slds-float_right" style="margin-right: 20rem;" slot="pageNumber"><b class="pagenumber">Page:</b></div>
+    </c-pagination-cmp>
+    </div>
+
+    <div if:true={viewRecord}>
+     
+            <div class="slds" style="background:#fff;">
+                <h1 style="color:#000; font-weight:normal; font-size:18px; padding:10px 3px 3px 3px; margin:5px 0 10px 10px;"
+                    class="slds-m-bottom_medium"  >
+                    <lightning-icon icon-name="utility:back" size="small" onclick={handleCancleRecord} alternative-text="Indicates back"></lightning-icon>
+                    
+                    <b style="padding-left: 10px;">Your Ticket</b></h1>
+                    
+                <table>
+                    <tr>
+                        <td>
+                            
+                                <div class="slds-form-element" style="margin-top:12px;">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-form-element__label">Ticket No</label>
+                                        <p>{ticket.Name}</p>
+                                   
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            
+                                <div class="slds-form-element" style="margin-top:12px;">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-form-element__label">Creation Date</label>
+                                        <p>{ticket.CreatedDate}</p>
+                                    </div>
+                               
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                                <div class="slds-form-element" style="margin-top:12px;">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-form-element__label">Service Category</label>
+                                        <p>{ticket.Service_Category__c}</p>
+                                    </div>
+                               
+                            </div>
+                        </td>
+                        <td>
+                            
+                                <div class="slds-form-element" style="margin-top:12px;">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-form-element__label">Sub Category</label>
+                                        <p>{ticket.Subcategory__c}</p>
+                                    </div>
+                                
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            
+                                <div class="slds-form-element" style="margin-top:12px;">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-form-element__label">Status</label>
+                                        <p>{ticket.Status__c}</p>
+                                    </div>
+                             
+                            </div>
+                        </td>
+                   
+                    
+                        <td>
+                            
+                                <div class="slds-form-element" style="margin-top:12px;">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-form-element__label">Location</label>
+                                        <p>{ticket.Location__c}</p>
+                                    </div>
+                                
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                           
+                                <div class="slds-form-element" style="margin-top:12px;">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-form-element__label">Asset</label>
+                                        <p>{ticket.AssetName__c}</p>
+                                    </div>
+                                </div>
+                           
+
+                        </td>
+                        <td>
+                            
+                                <div class="slds-form-element" style="margin-top:12px;">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-form-element__label">Account</label>
+                                        <p>{ticket.AccountName__c}</p>
+                                    </div>
+                               
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            
+                                <div class="slds-form-element" style="margin-top:12px;">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-form-element__label">Ticket Logged by Contact</label>
+                                        <p>{ticket.ContactName__c}</p>
+                                    </div>
+                                
+                            </div>
+                        </td>
+                    
+                        <td>
+                            
+                                <div class="slds-form-element" style="margin-top:12px;">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-form-element__label">Subject</label>
+                                        <p>{ticket.Subject__c}</p>
+                                    </div>
+                                
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                                <div class="slds-form-element" style="margin-top:12px;">
+                                    <div class="slds-form-element__control">
+                                        <label class="slds-form-element__label">Description</label>
+                                        <p>{ticket.Description__c}</p>
+                                    </div>
+                               
+                            </div>
+                        </td>
+                        
+                    </tr>
+                    
+                </table>
+            </div>
+            <lightning-datatable data={lstComments} columns={commentsColumns} key-field="id" hide-checkbox-column>
+            </lightning-datatable>
+
+    </div>
+</template>

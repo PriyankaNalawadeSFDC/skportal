@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Shared_With_Me</fullName>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>LinkedIn_Profile__c</columns>
+    <columns>CONTACT.DEPARTMENT</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Is_Contact_Owner__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Contacts Shared With Me</label>
+</ListView>

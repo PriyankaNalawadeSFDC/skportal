@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Others_Category_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (ISPICKVAL(Company_Category__c, &apos;Other&apos;), 
+ISBLANK(Others_Specify__c))</errorConditionFormula>
+    <errorMessage>Please enter Other category value</errorMessage>
+</ValidationRule>
